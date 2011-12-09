@@ -1,0 +1,38 @@
+USE CASE:
+If you are using HTML5 drag and want to drop into an element not visible in the viewport,
+it is not possible on most browsers. On Google Chrome you can. Moving the dragged element
+near the top or bottom of the viewport will scroll the page. But other browsers don't do
+that. With this jQuery plugin, you now can.
+
+HOW TO USE:
+Simply call this function and that's it!
+$().dndPageScroll();
+
+If you're new to programming, call this in a script tag as such:
+<script type="text/javascript">
+	$(document).ready(function() {
+		$().dndPageScroll();
+	});
+</script>
+
+HOW IT WORKS:
+The plugin creates invisible elements top and bottom of the viewport.
+These bind the dragenter and dragover events to scroll the page.
+The plugin is smart enough not to conflict with native page scroll such
+as in Google Chrome.
+
+OPTIONS:
+topId: Id of DIV element put at top of the viewport. Default is
+       top_scroll_page.
+bottomId: Id of DIV element put at bottom of the viewport. Default
+       is bottom_scroll_page.
+delay: An interger indicating the number of milliseconds between
+       scroll events. Default is 50.
+
+BROWSER SUPPORT:
+Tested in the latest Chrome, Safari and FireFox.
+Also test on IE9 and IE8.
+
+Author: Martin Drapeau
+Copyright: Planbox Inc. 2011
+License: MIT License (http://en.wikipedia.org/wiki/MIT_License)
