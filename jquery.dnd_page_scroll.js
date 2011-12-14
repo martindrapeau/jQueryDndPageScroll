@@ -80,7 +80,7 @@
 		});
 		// When DND ends, hide it.
 		$(document).bind('dragend', _hide);
-		// In ID dragend does not always get triggered.
+		// In IE dragend does not always get triggered.
 		// Workaround by hiding areas when the mouse enters one.
 		both_el.bind('mouseover', _hide);
 		
