@@ -35,12 +35,12 @@
 		// When DnD occurs over a scroll area - scroll the page!
 		var lastTop;
 		var lastBottom;
-		both_el.bind('dragenter', function(e) {
+		both_el.on('dragenter', function(e) {
 			var direction = ($(this).attr('id')==options.topId)?'up':'down';
 			//console.log('dragenter '+direction);
 			return true;
 		});
-		both_el.bind('dragover', function(e) {
+		both_el.on('dragover', function(e) {
 			// Wait a little while before doing stuff here again
 			if ($('html,body').is(':animated')) return true;
 			
@@ -74,15 +74,15 @@
 		};
 		
 		// When a DND drag event starts, show the scroll areas
-		$(document).bind('dragstart', function(e) {
+		$(document).on('dragstart', function(e) {
 			both_el.show();
 			return true;
 		});
 		// When DND ends, hide it.
-		$(document).bind('dragend', _hide);
+		$(document).on('dragend', _hide);
 		// In IE dragend does not always get triggered.
 		// Workaround by hiding areas when the mouse enters one.
-		both_el.bind('mouseover', _hide);
+		both_el.on('mouseover', _hide);
 		
 	};
 })(jQuery);
