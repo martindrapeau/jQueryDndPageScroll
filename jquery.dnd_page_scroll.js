@@ -10,7 +10,8 @@
 		var defaults = {
 			topId: 'top_scroll_page',
 			bottomId: 'bottom_scroll_page',
-			delay: 50
+			delay: 50,
+			height: 20
 		};
 		var options = $.extend(defaults, options);
 		
@@ -27,7 +28,7 @@
 		both_el.css({
 			//backgroundColor: '#FFE698', 
 			position:'fixed', left: 0, right: 0,
-			height: 20, zIndex: 999999
+			height: options.height, zIndex: 999999
 		});
 		top_el.css({top:0});
 		bottom_el.css({bottom:0});
