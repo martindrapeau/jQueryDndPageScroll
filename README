@@ -26,8 +26,10 @@ topId: Id of DIV element put at top of the viewport. Default is
        top_scroll_page.
 bottomId: Id of DIV element put at bottom of the viewport. Default
        is bottom_scroll_page.
-delay: An interger indicating the number of milliseconds between
+delay: An integer indicating the number of milliseconds between
        scroll events. Default is 50.
+height: An integer value how tall the top/bottom elements
+        should be. Default is 20.
 
 BROWSER SUPPORT:
 Tested in the latest Chrome, Safari and FireFox.
